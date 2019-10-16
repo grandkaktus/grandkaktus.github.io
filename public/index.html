@@ -7,10 +7,57 @@
 </head>
 <body>
 <div class="content">
-	<h1>Сайт 
-		</h1>
-		<p>
-		Данный 123 сайт создан, <b>в первую очередь, для помощи </p>
+	<h1>Счета </h1>
+	<a href="add_order.html">Добавить</a>
+<br><br>
+
+<form id="under_table">
+	<label>Поиск </label>
+	<input type="text" name="search">
+	<select name="select_search">
+		<option value="all">all</option>
+		<option value="id">id</option>
+		<option value="direction">direction</option>
+		<option value="number">number</option>
+		<option value="date_created">date_created</option>
+		<option value="date_due">date_due</option>
+		<option value="date_supply">date_supply</option>	
+	</select>
+<br>
+	<label>Сортировка </label>
+	<select name="select_sort_item">
+		<option value="id">id</option>
+		<option value="direction">direction</option>
+		<option value="number">number</option>
+		<option value="date_created">date_created</option>
+		<option value="date_due">date_due</option>
+		<option value="date_supply">date_supply</option>	
+	</select>
+	<select name="select_sort">
+		<option value="none">none</option>
+		<option value="asc">asc</option>
+		<option value="desc">desc</option>
+	</select>
+<form>
+	<input type="button" value="Показать" onclick="search_sort()">	
+	<input type="button" value="Сбросить фильтр" onclick="no_search_sort()">	
+<br><br>
+
+<table id="table">
+	<tr>
+		<td>id </td>
+		<td>direction </td>
+		<td>number </td>
+		<td>date_created </td>
+		<td>date_due </td>
+		<td>date_supply </td>
+		<td>comment </td>
+	</tr>
+</table>
+
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="other.js"></script>
+
  </div>
 
 </body>
