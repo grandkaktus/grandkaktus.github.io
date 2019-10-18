@@ -1,0 +1,36 @@
+{
+	"info": {
+		"_postman_id": "d289dbc5-7823-45d9-b4b0-9e30255c07c9",
+		"name": "Collect 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get + sort",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://progect-one.herokuapp.com/invoices?{{key}}={{val}}",
+					"protocol": "https",
+					"host": [
+						"progect-one",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"invoices"
+					],
+					"query": [
+						{
+							"key": "{{key}}",
+							"value": "{{val}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
