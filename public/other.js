@@ -3,7 +3,7 @@
 function init(get) {
 	$.ajax({
 		type: "GET",
-		url: "/invoices" +get,
+		url: "https://progect-one.herokuapp.com/invoices" +get,
 		dataType: 'json',
 		error: function(){
 			alert('error');
@@ -45,7 +45,7 @@ function delet() {
 		$(this).closest('tr.tr').remove();
 		$.ajax({
 			type: 'DELETE',
-			url: "/invoices/"+id,
+			url: "https://progect-one.herokuapp.com/invoices/"+id,
 			dataType: 'json',
 			error: function(){
 				alert('error');
@@ -69,7 +69,7 @@ function edit_db (query) {
 	let dop = (query == 'patch') ? '/'+f.id.value : ''
 	$.ajax({
 		type: query,
-		url: "/invoices"+dop,
+		url: "https://progect-one.herokuapp.com/invoices"+dop,
 		dataType: 'json',
 		data: { 
 			id: f.id.value,
