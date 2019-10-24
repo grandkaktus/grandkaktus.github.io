@@ -59,7 +59,7 @@ function delet() {
 // изменение записи
 function edit(key) {
 	if (confirm('Редактировать строку № '+key+'?') ) {
-		window.open("/add_order.html?"+key ,"_self")
+		window.open("add_order.html?"+key ,"_self")
 	}
 }	
 
