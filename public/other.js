@@ -59,7 +59,7 @@ function delet() {
 // изменение записи
 function edit(key) {
 	if (confirm('Редактировать строку № '+key+'?') ) {
-		window.open("add_order.html?"+key ,"_self")
+		window.open("/public/add_order.html?"+key ,"_self")
 	}
 }	
 
@@ -131,7 +131,7 @@ $(document).ready(function(){
 	
 			$.ajax({
 				type: "GET",
-				url: "/invoices?id="+id[1],
+				url: "https://progect-one.herokuapp.com/invoices?id="+id[1],
 				dataType: 'json',
 				error: function(){
 					alert('error');
