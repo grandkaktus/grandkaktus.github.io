@@ -1,4 +1,4 @@
-﻿"use strict";
+"use strict";
 
 function init(get) {
 	$.ajax({
@@ -51,7 +51,7 @@ function delet() {
 				alert('error');
 			},
 			success: function(){
-				
+				sum_order();
 			}
 		});
 	}
@@ -122,6 +122,12 @@ function no_search_sort() {
 	init('');
 }	
 
+// Подсчет общего кол-ва счетов
+function sum_order() {
+	let sum_orders = $('table#table td[data-id]').length;
+	$('p#sum_order').text('Всего счетов: '+ sum_orders);
+}
+
 // Исполняется после загрузки стр
 $(document).ready(function(){
 	let url = window.location.href;
@@ -160,5 +166,6 @@ $(document).ready(function(){
 	}
 	else {
 		init('');
+		sum_order();
 	}
 });
