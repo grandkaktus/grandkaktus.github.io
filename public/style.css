@@ -1,0 +1,4 @@
+#table tr:first {
+  border-bottom: 0.05rem solid #000;
+  bacground-color: #ccc;
+}
