@@ -124,7 +124,7 @@ function no_search_sort() {
 
 // Подсчет общего кол-ва счетов
 function sum_order() {
-	let sum_orders = $('table#table td[data-id]').length;
+	let sum_orders = $('table#table input[data-id]').length;
 	$('p#sum_order').text('Всего счетов: '+ sum_orders);
 }
 
